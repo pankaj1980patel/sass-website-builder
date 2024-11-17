@@ -14,10 +14,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default async function Home() {
-  const prices = await stripe.prices.list({
-    product: process.env.NEXT_PLURA_PRODUCT_ID,
-    active: true,
-  })
+  // const prices = await stripe.prices.list({
+  //   product: process.env.NEXT_PLURA_PRODUCT_ID,
+  //   active: true,
+  // })
 
   return (
     <>
@@ -50,7 +50,7 @@ export default async function Home() {
           {" you're"} not <br />
           ready to commit you can get started for free.
         </p>
-        <div className="flex  justify-center gap-4 flex-wrap mt-6">
+        {/* <div className="flex  justify-center gap-4 flex-wrap mt-6">
           {prices.data.map((card) => (
             //WIP: Wire up free product from stripe
             <Card
@@ -153,7 +153,7 @@ export default async function Home() {
               </Link>
             </CardFooter>
           </Card>
-        </div>
+        </div> */}
       </section>
     </>
   )
