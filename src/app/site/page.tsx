@@ -14,10 +14,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default async function Home() {
-  // const prices = await stripe.prices.list({
-  //   product: process.env.NEXT_PLURA_PRODUCT_ID,
-  //   active: true,
-  // })
+  const prices = await stripe.prices.list({
+    product: process.env.NEXT_PLURA_PRODUCT_ID,
+    active: true,
+  })
 
   return (
     <>
